@@ -50,11 +50,15 @@ export default {
   mounted () {
     const container = this.$refs.jsoneditor
     const options = _.extend({
-      onChange: this._onChange
+      onChange: this._onChange,
+      modes: ['view', 'form', 'code', 'text'],
+      indentation: 4,
+      search: false
     }, this.options)
 
     this.editor = new JSONEditor(container, options)
     this.editor.set(this.json)
+    this.editor.setMode("code")
   },
   beforeDestroy () {
     if (this.editor) {
@@ -66,4 +70,7 @@ export default {
 </script>
 
 <style>
+  .ace-jsoneditor, textarea.jsoneditor-text{
+    min-height: calc(100vh - 120px)!important;
+  }
 </style>
