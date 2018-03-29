@@ -70,7 +70,4 @@ export default {
 </script>
 
 <style>
-  .ace-jsoneditor, textarea.jsoneditor-text{
-    min-height: calc(100vh - 120px)!important;
-  }
 </style>
