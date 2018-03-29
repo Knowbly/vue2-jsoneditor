@@ -5,7 +5,7 @@
 
 <script>
 
-import JSONEditor from 'jsoneditor/dist/jsoneditor-minimalist.js'
+import JSONEditor from 'jsoneditor/dist/jsoneditor.js'
 import 'jsoneditor/dist/jsoneditor.min.css'
 import _ from 'lodash'
 
